@@ -3,8 +3,14 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
 function addExcitement (sentence) {
     let buildMeUp = ""
 
-    for (let i = 0; i < sentence.length; i++) {
-        buildMeUp += (`${sentence[i]} `);
+    for (let i = 1; i <= sentence.length; i++) {
+        if(i % 3 !== 0) {
+            buildMeUp += (`${sentence[i - 1]} `);
+        }
+        else {
+            buildMeUp += (`${sentence[i - 1]}! `);
+        }
+       
         console.log(buildMeUp);
     }
 
