@@ -1,6 +1,6 @@
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-function addExcitement (sentence) {
+function addExcitement (sentence, punctuation) {
     let buildMeUp = ""
 
     for (let i = 1; i <= sentence.length; i++) {
@@ -11,7 +11,7 @@ function addExcitement (sentence) {
             let exclaimations = ""
             let j = i / 3;
             for (k = 0; k < j; k++) {
-                exclaimations += "!";
+                exclaimations += punctuation;
             }
             buildMeUp += (`${sentence[i - 1]}${exclaimations} `);
         }
@@ -21,4 +21,4 @@ function addExcitement (sentence) {
 
 }
 
-addExcitement(sentence);
+addExcitement(sentence, "?");
