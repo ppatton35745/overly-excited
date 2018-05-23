@@ -8,7 +8,12 @@ function addExcitement (sentence) {
             buildMeUp += (`${sentence[i - 1]} `);
         }
         else {
-            buildMeUp += (`${sentence[i - 1]}! `);
+            let exclaimations = ""
+            let j = i / 3;
+            for (k = 0; k < j; k++) {
+                exclaimations += "!";
+            }
+            buildMeUp += (`${sentence[i - 1]}${exclaimations} `);
         }
        
         console.log(buildMeUp);
